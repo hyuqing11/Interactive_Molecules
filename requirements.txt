@@ -2,7 +2,6 @@ ase==3.22.1
 numpy==2.1.2
 plotly==5.22.0
 py3Dmol==2.4.0
-py3Dmol==2.4.0
 scipy==1.7.3
 stmol==0.0.9
 streamlit==1.39.0
