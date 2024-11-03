@@ -10,10 +10,12 @@ This is a Streamlit web application for visualizing and transforming molecular s
 
 ## Usage
 
-1. **Start the application** by running the command:
-   ```bash
-   streamlit run app.py
-
+1. **Access the application:**
+   - You can open the app directly using this [website link](https://interactivemolecules-9jdne3eohsikroemn7mtlx.streamlit.app/).
+   - Or, start the application locally by running the command:
+     ```bash
+     streamlit run app.py
+     ```
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
