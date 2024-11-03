@@ -13,3 +13,21 @@ This is a Streamlit web application for visualizing and transforming molecular s
 1. **Start the application** by running the command:
    ```bash
    streamlit run app.py
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Feel free to fork this project, create issues, and submit pull requests. Contributions are always welcome!
+
+## Acknowledgements
+
+- Streamlit
+- ASE (Atomic Simulation Environment)
+- py3Dmol
+## Contact
+For questions or suggestions, contact yuiqinghuang2018@gmail.com or create an issue on this repository.
+
+
