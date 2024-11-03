@@ -16,6 +16,14 @@ This is a Streamlit web application for visualizing and transforming molecular s
      ```bash
      streamlit run app.py
      ```
+2. **Use the sidebar to:**
+   - **Select a molecule** (e.g., CH₄, O₂, H₂O).
+   - **Adjust transformation parameters** such as rotation, translation, and atom swapping.
+   - **Choose a descriptor** to display input data that represents the local environment of molecules.
+
+3. **View the results**:
+   - See the transformed positions in the main panel.
+   - Interact with the 3D molecular visualization to explore the molecule from different angles.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
