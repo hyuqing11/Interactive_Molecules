@@ -19,7 +19,7 @@ This is a Streamlit web application for visualizing and transforming molecular s
 2. **Use the sidebar to:**
    - **Select a molecule** (e.g., CH₄, O₂, H₂O).
    - **Adjust transformation parameters** such as rotation, translation, and atom swapping.
-   - **Choose a descriptor** to display input data that represents the local environment of molecules.
+   - **Choose a descriptor** to display the local environment of molecules.
 
 3. **View the results**:
    - See the transformed positions in the main panel.
