@@ -1,6 +1,7 @@
 import torch
 from nn_test import compute_D_i, GNetwork
 from GNN import GNN
+import numpy as np
 
 
 def DeepPot_SE(positions,input_dim=1,hidden_dim=32,output_dim=4):
@@ -49,7 +50,8 @@ def calculation_functions():
         "Norms": norms,
         "Invariance": invariance,
         "DeepPot_SE": DeepPot_SE,
-        "DimnetPlus": DimnetPlus
+        "DimnetPlus": DimnetPlus,
+        "CustomFunc": lambda x: x  # Placeholder for custom function
     }
 
 

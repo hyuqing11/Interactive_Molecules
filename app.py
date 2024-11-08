@@ -5,7 +5,7 @@ from transformations import transform_positions
 from calculations import calculation_functions, apply_transformation
 from visualizations import display_3d_molecule, show_array
 from stmol import showmol
-
+from custom_function_handler import handle_custom_function
 # Main Streamlit App
 st.title("Interactive Molecular Transformation")
 
@@ -21,9 +21,33 @@ swap = st.sidebar.slider("Swap Atom Index with First Atom", 0, len(positions) - 
 
 # Calculations
 funcs = calculation_functions()
-selected_func = st.sidebar.selectbox("Select Calculation Function", list(funcs.keys()))
+selected_func_name = st.sidebar.selectbox("Select Calculation Function", list(funcs.keys()))
+
+# Show input fields for custom function only if "CustomFunc" is selected
+'''if selected_func_name == "CustomFunc":
+    st.sidebar.header("Add Your Own Calculation Function")
+    custom_function_name = st.sidebar.text_input("Function Name", "CustomFunc")
+    custom_function_code = st.sidebar.text_area(
+        "Function Code (use 'pos' as the input variable, e.g., 'lambda pos: np.mean(pos, axis=0).reshape(-1,1)')",
+        "lambda x: np.mean(x, axis=0).reshape(-1,1)"
+    )
+
+    # Try to add the custom function
+    try:
+        custom_function = eval(custom_function_code)
+        funcs[custom_function_name] = custom_function
+        st.sidebar.success(f"Function '{custom_function_name}' added successfully!")
+    except Exception as e:
+        st.sidebar.error(f"Error in your function code: {e}")'''
+if selected_func_name == "CustomFunc":
+    custom_function = handle_custom_function()
+    if custom_function:
+        funcs[selected_func_name] = custom_function
+
+selected_func = funcs[selected_func_name]
+
 transformed_positions = transform_positions(positions, xrot, xtrans, swap)
-results = apply_transformation(transformed_positions, funcs[selected_func])
+results = apply_transformation(transformed_positions, selected_func)
 
 
 # Display results
