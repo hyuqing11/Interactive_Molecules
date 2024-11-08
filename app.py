@@ -23,22 +23,7 @@ swap = st.sidebar.slider("Swap Atom Index with First Atom", 0, len(positions) - 
 funcs = calculation_functions()
 selected_func_name = st.sidebar.selectbox("Select Calculation Function", list(funcs.keys()))
 
-# Show input fields for custom function only if "CustomFunc" is selected
-'''if selected_func_name == "CustomFunc":
-    st.sidebar.header("Add Your Own Calculation Function")
-    custom_function_name = st.sidebar.text_input("Function Name", "CustomFunc")
-    custom_function_code = st.sidebar.text_area(
-        "Function Code (use 'pos' as the input variable, e.g., 'lambda pos: np.mean(pos, axis=0).reshape(-1,1)')",
-        "lambda x: np.mean(x, axis=0).reshape(-1,1)"
-    )
 
-    # Try to add the custom function
-    try:
-        custom_function = eval(custom_function_code)
-        funcs[custom_function_name] = custom_function
-        st.sidebar.success(f"Function '{custom_function_name}' added successfully!")
-    except Exception as e:
-        st.sidebar.error(f"Error in your function code: {e}")'''
 if selected_func_name == "CustomFunc":
     custom_function = handle_custom_function()
     if custom_function:
