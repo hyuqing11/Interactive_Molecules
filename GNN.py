@@ -1,3 +1,4 @@
+np.math = math
 from torch_geometric.nn import radius_graph
 from torch_geometric.nn.models.dimenet import (
     BesselBasisLayer,
