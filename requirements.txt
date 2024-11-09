@@ -8,3 +8,4 @@ stmol==0.0.9
 streamlit==1.39.0
 torch==2.2.1
 torch_geometric==2.6.1
+torch-cluster
