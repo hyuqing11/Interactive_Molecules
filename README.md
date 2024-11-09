@@ -23,7 +23,7 @@ This is a Streamlit web application for visualizing and transforming molecular s
      - Adjust rotation (degrees), translation, and atom swapping using sliders.
    - **Choose a descriptor**:
      - Select from built-in options like **DeepPot_SE** and **DimnetPlus**.
-   - Or, **add your own custom function**:
+     - Or, **add your own custom function**:
        - **Write Code**: Enter your function directly in the provided text area.
        - **Upload File**: Upload a `.py` file containing your custom function (e.g., a function named `custom_function`).
 
