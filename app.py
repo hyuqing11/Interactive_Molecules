@@ -33,6 +33,7 @@ selected_func = funcs[selected_func_name]
 
 transformed_positions = transform_positions(positions, xrot, xtrans, swap)
 results = apply_transformation(transformed_positions, selected_func)
+#results = selected_func(transformed_positions)
 
 
 # Display results

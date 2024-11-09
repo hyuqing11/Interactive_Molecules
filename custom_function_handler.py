@@ -1,7 +1,7 @@
 import streamlit as st
 import importlib.util
 import os
-
+import numpy as np
 def handle_custom_function():
     st.sidebar.header("Add Your Custom Function")
     custom_input_method = st.sidebar.radio("Choose how to add your custom function:", ("Write Code", "Upload File"))
