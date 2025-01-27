@@ -1,4 +1,7 @@
-torch==2.0.1+cpu  # Replace with the appropriate version
+torch==2.0.1  # Replace with the appropriate version
+torchvision==0.15.2
+torchaudio==2.0.2
+-f https://download.pytorch.org/whl/cpu
 torch_geometric==2.6.1
 torch-cluster==1.6.3
 -f https://data.pyg.org/whl/torch-2.0.1+cpu.html
